@@ -1,8 +1,5 @@
 exports.validateLoginData = (req, res, next) => {
     const { email, phone } = req.body;
-
-    console.log('Body from frontend', req.body)
-
     // Check if email is present and in the correct format
     if (email !== undefined) {
         if (typeof email === 'string' && /\S+@\S+\.\S+/.test(email)) {
